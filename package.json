@@ -57,7 +57,7 @@
     "laco-react": "^1.1.0",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.2",
     "next-compose-plugins": "^2.2.0",
     "next-transpile-modules": "^2.3.1",
     "now-env": "^3.2.0",
