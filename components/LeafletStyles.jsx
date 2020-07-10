@@ -65,6 +65,20 @@ let Styles = () => (
       border-radius: 50%;
       justify-content: center;
       align-items: center;
+      align-self: flex-end;
+
+    }
+    .ship-div-marker-icon__direction .moving {
+      animation-name: bounce-2;
+      animation-timing-function: ease;
+      animation-duration: 2s;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+    }
+    @keyframes bounce-2 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-5px); }
+        100% { transform: translateY(0); }
     }
   `}</style>
 );

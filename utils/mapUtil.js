@@ -24,11 +24,15 @@ export let createCustomIconSmall = () =>
 
 export let createDivShipMarker = data => {
   if (!data || !data.position) return null;
-
   let rotate = 0;
+  let isMoving = false;
   if (data.navigation && data.navigation.heading) {
     rotate = Number(data.navigation.heading) || 0;
     rotate %= 360;
+  }
+  if (data.navigation && data.navigation.speed)
+  {
+    isMoving = true;
   }
 
   let icon = L.divIcon({
@@ -42,7 +46,10 @@ export let createDivShipMarker = data => {
                 ? data.name.replace('Seaways', '').replace('Côte des', '')
                 : ''
             }</div>
-            <div class="js ship-div-marker-icon__direction" data-rotate="${rotate}" style="transform: rotate(${rotate}deg)">&#x2191</div>
+
+            <div class="js ship-div-marker-icon__direction" data-rotate="${rotate}" style="transform: rotate(${rotate}deg)">
+              <div class="${isMoving ? 'moving' : ''}">&#x2191</div>
+            </div>
         </div>`,
   });
   let marker = L.marker([data.position.lat, data.position.lng], {
@@ -201,6 +208,6 @@ export let zoomToTerminal = terminal => {
     map.setView([terminal.position.lat, terminal.position.lng], 9);
 };
 
-export const tileLayerMapbox = `https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=${process.env.mapBoxToken}`;
+export const tileLayerMapbox = `https://api.mapbox.com/v4/{id}/{z}/{x}/{y}@2x.png?access_token=${process.env.mapBoxToken}`;
 export const tileLayerOpenStreetMaps =
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';

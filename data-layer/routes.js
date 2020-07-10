@@ -8,12 +8,21 @@ const lookup = arrayToObject(terminals, "id");
 let data = [
   {
     id: "",
-    name: "Copenhagen - Oslo",
+    name: "Copenhagen - Frederikshavn",
     latlngs: [
       [lookup["copenhagen"].position.lat, lookup["copenhagen"].position.lng],
+      [lookup["frederikshavn"].position.lat, lookup["frederikshavn"].position.lng]
+    ]
+  },
+  {
+    id: "",
+    name: "Frederikshavn - Oslo",
+    latlngs: [
+      [lookup["frederikshavn"].position.lat, lookup["frederikshavn"].position.lng],
       [lookup["oslo"].position.lat, lookup["oslo"].position.lng]
     ]
   },
+
   {
     id: "",
     name: "Newcastle - Amsterdam",

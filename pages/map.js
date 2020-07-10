@@ -266,6 +266,7 @@ let updateMarkerPosition = ({ ships, map }) => {
                   `shipDivMarkerContent${ship.imo}`
                 );
                 if (shipDivMarkerContentEl) {
+                  console.log(shipDivMarkerContentEl);
                   let direction = shipDivMarkerContentEl.querySelector(
                     '.ship-div-marker-icon__direction'
                   );

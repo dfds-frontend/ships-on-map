@@ -42,6 +42,11 @@ let data = [
     position: { lat: 55.701529, lng: 12.595976 }
   },
   {
+    id: "frederikshavn",
+    name: "Frederikshavn terminal",
+    position: { lat: 57.4335086, lng: 10.5435977 }
+  },
+  {
     id: "oslo",
     name: "Oslo terminal",
     position: { lat: 59.902629, lng: 10.743466 }
