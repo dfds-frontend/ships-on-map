@@ -6,7 +6,7 @@ import fetch from 'isomorphic-unfetch';
 export default async function getShips(req, res) {
   async function getShipsFromApi() {
     try {
-      let url = `https://api.hellman.oxygen.dfds.cloud/dev/vessel/api/v1/Ships?v=${Date.now()}`;
+      let url = `https://api.hellman.oxygen.dfds.cloud/prod/vessel/api/v1/Ships?v=${Date.now()}`;
 
       const response = await fetch(url, {
         method: 'GET',
