@@ -13,7 +13,7 @@ export default async function getShipsFromApi({ useProxy = true } = {}) {
   try {
     let url = useProxy
       ? `${apiBaseUrl}/get-ships?v=${Date.now()}`
-      : `https://api.hellman.oxygen.dfds.cloud/dev/vessel/api/v1/Ships?v=${Date.now()}`;
+      : `https://api.hellman.oxygen.dfds.cloud/prod/vessel/api/v1/Ships?v=${Date.now()}`;
 
     if (process.env.NODE_ENV === 'development') {
       url = `${apiBaseUrl}/mock-ships`;
