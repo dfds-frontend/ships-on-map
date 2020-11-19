@@ -208,6 +208,6 @@ export let zoomToTerminal = terminal => {
     map.setView([terminal.position.lat, terminal.position.lng], 9);
 };
 
-export const tileLayerMapbox = `https://api.mapbox.com/v4/{id}/{z}/{x}/{y}@2x.png?access_token=${process.env.mapBoxToken}`;
+export const tileLayerMapbox = `https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}@2x?access_token=${process.env.mapBoxToken}`;
 export const tileLayerOpenStreetMaps =
   'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
